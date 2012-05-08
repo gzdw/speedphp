@@ -1,0 +1,15 @@
+<form id="form_posts" method="post" action="<{spUrl c=znPost a=edit}>">
+<{foreach from=$group item=arr name=thearr1 key=key}>
+<ul> 
+    <li><{$key}></li>
+    <ul>
+        <{foreach from=$arr item=arr_item name=thearr1}>
+        <li>
+            <a href="<{spUrl c=znPost a=edit post_id=$arr_item.post_id}>" data-id="<{$arr_item.post_id}>"><{$arr_item.post_title}></a>
+        </li>
+        <{/foreach}>
+        <input type="hidden" name="post_id" id="post_id" value="-1" />
+    </ul>
+</ul>
+<{/foreach}>
+</form>

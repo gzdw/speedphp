@@ -1,0 +1,8 @@
+模板（HTML）命名规范：
+1. 具体页面 admin_ 为前缀, 即 admin_ + 模块 + 动作（需要的时候才加）
+   如 admin_post, admin_post_add 等
+   
+2. 模块页面 module_ 为前缀, 即 module_ + 模块    
+   如 module_comment  
+  （嵌套用的页面）
+  

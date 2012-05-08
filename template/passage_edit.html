@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{$web_site}</title>
+        <meta charset="utf-8" />
+        <script src="/speedphp/tpl/js/ueditor/editor_config.js"></script>
+        <script src="/speedphp/tpl/js/ueditor/editor_all_min.js"></script>
+        <link rel="stylesheet" href="/speedphp/tpl/js/ueditor/themes/default/ueditor.css"/>
+    </head>
+    
+    <body>
+        <div id="test" style="margin: 0 auto; width: 960px;">
+            <form action="{$submit_url}" method="post">
+                <div>
+                    <label for="title">标题</label>
+                    <input type="text" name="title" id="title" value="{$result.title}" />
+                </div>
+                <div>
+                    <label for="author">作者</label>
+                    <input type="text" name="author" id="author" value="{$result.author}" />
+                </div>
+                <div>
+                    <label for="posttime">日期</label>
+                    <input type="posttime" name="posttime" id="posttime" value="{$result.posttime}" />
+                </div>
+                <div>
+                    <label for="category">分类</label>
+                    <textarea name="category" id="category" style="width: 400px; height: 20px;">{$result.category}</textarea>
+                </div>
+                <div>
+                    <label for="passage" style="display: block;">正文内容(含HTML)</label>
+                    <script type="text/plain" id="editor">{$result.passage}</script>
+                    <input type="hidden" name="id" id="id" value="{$result.id}" />
+                    <input type="submit" value="提交" />
+                </div>
+            </form>
+            <script>
+                var editor = new baidu.editor.ui.Editor({
+                    initialContent: '', // 初始化的值
+                    textarea:'passage'  // 提交后台的数据 name
+                });
+                editor.render('editor');
+            </script>
+			
+        </div>
+    </body>
+</html>
