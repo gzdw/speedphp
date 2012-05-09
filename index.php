@@ -29,6 +29,6 @@ $spConfig = array(
 );
 
 // git 测试 by zhining 
-// 同步测试
+// 同步测试  
 require(SP_PATH."/SpeedPHP.php");
 spRun();
