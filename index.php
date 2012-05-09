@@ -27,5 +27,8 @@ $spConfig = array(
 		'auto_display_suffix' => '.html', // 自动输出模板的后缀名
 	),
 );
+
+// git 测试
+
 require(SP_PATH."/SpeedPHP.php");
 spRun();
