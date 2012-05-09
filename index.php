@@ -8,6 +8,9 @@ $spConfig = array(
 		'password' => '123456',
 		'database' => 'spblog',
 	),
+    
+    
+    // test 
 	'view' => array( // 视图配置
 		'enabled' => TRUE, // 开启视图
 		'config' =>array(
