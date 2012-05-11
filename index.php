@@ -1,16 +1,14 @@
 <?php
 define("APP_PATH",dirname(__FILE__));
 define("SP_PATH",dirname(__FILE__).'/SpeedPHP');
+
 $spConfig = array(
 	"db" => array(
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '123456',
-		'database' => 'spblog',
+		'database' => 'spBlog',
 	),
-    
-    
-    // test 
 	'view' => array( // 视图配置
 		'enabled' => TRUE, // 开启视图
 		'config' =>array(
@@ -31,7 +29,11 @@ $spConfig = array(
 	),
 );
 
-// git 测试 by zhining 
-// 同步测试  
 require(SP_PATH."/SpeedPHP.php");
+
+
+define('MY_PATH', APP_PATH.'/include');
+define('TPL_PATH', APP_PATH.'/template');
+
+// 应用程序开始
 spRun();
